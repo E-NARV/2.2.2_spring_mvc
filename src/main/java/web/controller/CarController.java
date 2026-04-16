@@ -8,19 +8,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import web.service.CarService;
 
-// Аннотация, обозначающая, что класс является контроллером
 @Controller
-// URL, к которому привязаны методы этого контроллера
+
 @RequestMapping("/cars")
 public class CarController {
-    // Сервис для работы с объектами Car (dependency injection)
+
     private  final CarService carService;
 
     public CarController(CarService carService) {
         this.carService = carService;
     }
 
-    // Обрабатываем GET-запрос на "/cars"
     @GetMapping
     public String cars(@RequestParam(value = "count", required = false) Integer count,
                        Model model) {

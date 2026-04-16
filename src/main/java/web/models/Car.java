@@ -3,47 +3,29 @@ package web.models;
 import java.util.Objects;
 
 public class Car {
-    // Объявляем параметры для машины
     private int id;
     private String model;
     private String brand;
 
-    // Пустой конструктор
-    public Car() {
+    public Car() { }
 
-    }
-
-    // Конструктор с параметрами
     public Car(int id, String model, String brand) {
         this.id = id;
         this.model = model;
         this.brand = brand;
     }
 
-    // Геттеры, сеттеры, переопределение toString, equals и hashcode
-    public int getId() {
-        return id;
-    }
+    public int getId() { return id; }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    public void setId(int id) { this.id = id; }
 
-    public String getModel() {
-        return model;
-    }
+    public String getModel() { return model; }
 
-    public void setModel(String model) {
-        this.model = model;
-    }
+    public void setModel(String model) { this.model = model; }
 
-    public String getBrand() {
-        return brand;
-    }
+    public String getBrand() { return brand; }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
+    public void setBrand(String brand) { this.brand = brand; }
 
     @Override
     public String toString() {
