@@ -28,15 +28,6 @@ public class Car {
     public void setBrand(String brand) { this.brand = brand; }
 
     @Override
-    public String toString() {
-        return "Car{" +
-                "id=" + id +
-                ", model='" + model + '\'' +
-                ", brand='" + brand + '\'' +
-                '}';
-    }
-
-    @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Car car = (Car) o;
@@ -48,5 +39,14 @@ public class Car {
     @Override
     public int hashCode() {
         return Objects.hash(id, model, brand);
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "id=" + id +
+                ", model='" + model + '\'' +
+                ", brand='" + brand + '\'' +
+                '}';
     }
 }
